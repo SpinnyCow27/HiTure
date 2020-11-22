@@ -1,0 +1,59 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Perfil de {{user.username}}</title>
+        {% include "include/header.html" %}
+    </head>
+</head>
+<body>
+    {% include "include/navbar.html" %}<br><br><br><br><br><br><br>
+    <div class="table-responsive">
+        <table class="table col-12  ">
+            <tr>
+                <td><b>Usuario </b></td>
+                <td>{{user.username}}</td>
+            </tr>
+            <tr>
+                <td><b>Nombre y Apellido</b></td>
+                {% if user.first_name is not null %}
+                <td>{{user.first_name}} {{user.last_name}}</td>
+                {% else %}
+                <td>No Contiene</td>
+                {% endif %}
+            </tr>
+            <tr>
+                <td><b>Correo</b></td>
+                <td>{{user.email}}</td>
+            </tr>
+        </table>
+        <!--<center><a href="/admin_perfil/{{user.id}}" class="btn btn-primary"> | <i class="fas fa-pencil-alt"></i> Modificar | </a></center>-->
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--<div class="container border align-middle">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-4">
+                <b>Usuario:</b> 
+                {{user.username}}
+            </div>
+            <div class="col col-lg-4">
+                <b>Nombre y Apellido:</b>
+                {% if user.first_name is not null %}
+                {{user.first_name}} {{user.last_name}}
+                {% else %}
+                No Contiene
+                {% endif %}
+            </div>
+            <div class="col col-lg-4">
+                <b>Correo:</b>
+                {{user.email}}
+            </div>
+        </div>
+    </div><br><br><br><br><br><br><br><br><br>-->
+    {% include "include/footer.html" %}
+</body>
+</html>

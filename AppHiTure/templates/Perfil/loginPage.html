@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Ture - Login</title>
+    <link rel="stylesheet" href="{% static 'css/Principal/Estilos/estilo_login.css' %}" type="text/css">
+    {% include "include/header.html" %}
+</head>
+<body>
+    {% include "include/navbar.html" %}
+    <br><br><br><br>
+    <div style="background-image: url('/static/img/Fondo_Registro.png');"width="1920" height="704">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+            <div class="d-none d-md-flex col-md-4 col-lg-6"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-md-9 col-lg-8 mx-auto">
+                        <h3 class="login-heading mb-4" style="color: white"><b>Bienvenido! Aquí puedes Iniciar Sesión</b></h3>                
+                        <form action="" method="POST">
+                          {% csrf_token %}
+                        <div class="form-label-group">
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Usuario" required autofocus>
+                            <label for="username">Usuario</label>
+                        </div>
+      
+                        <div class="form-label-group">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" required>
+                            <label for="password">Contraseña</label>
+                        </div>
+      
+                        <!--<div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Recordar contraseña</label>
+                        </div>--><br>
+                        <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Iniciar Sesión</button>                   
+                        <br/>
+                        <div class="text-center">
+                            <a href="{% url 'registro' %}">¿Aún no se ha creado una Cuenta? Registrarse!</a>
+                        </div>
+                        <div class="centrar2">
+                            <a href="{% url 'registro' %}"><i class="fas fa-address-card"></i></a>
+                        </div><br><br>
+                        {% for message in messages %}
+                        <p><b>{{message}}</b></p>
+                        {% endfor %}
+                        <p style="color: white;">Olvidó su contraseña? <a href="{% url 'password_reset'%}">Actualiza tu contraseña!</a></p>     
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+</body>
+<footer>
+    {% include "include/footer.html" %}
+</footer>
+</html>

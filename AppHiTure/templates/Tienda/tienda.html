@@ -7,17 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Tienda de MicroCorpX</title>
-        <link  rel="icon"   href="{% static 'img/faviconxbox.ico' %}" type="image/png"/>
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'css/Principal/css/styles.css' %}" rel="stylesheet">
-        <!-- Fonts CSS-->
-        <link rel="stylesheet" href="{% static 'css/Principal/css/heading.css' %}">
-        <link rel="stylesheet" href="{% static 'css/Principal/css/body.css' %}">
-        <!--JQUERY LAST-->
-        <script src="http://code.jquery.com/jquery.latest.min.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="{% static 'css/Principal/Estilos/estilo.css' %}" type="text/css">
+        {% include "include/header.html" %}
     </head>
     
     <i class="fa fa-windows" aria-hidden="true"></i>
@@ -28,7 +18,7 @@
             <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'index2' %}">P. PRINCIPAL</a>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'index' %}">P. PRINCIPAL</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'tienda' %}">TIENDA</a>
                     </li>

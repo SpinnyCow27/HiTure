@@ -24,40 +24,7 @@
 =======
     <!--♥ Branch Main-->
 >>>>>>> bafb3d7069dff156871e146a80844ce563f83250
-    <i class="fa fa-windows" aria-hidden="true"></i>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-            <div class="container"><a class="navbar-brand js-scroll-trigger" href="https://www.microsoft.com/es-cl"><i class="fab fa-windows"></i> MICROSOFT</a>
-                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">MÁS VENDIDOS</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'tienda' %}">TIENDA</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'contacto' %}">CONTACTO</a>
-                        </li>
-                        {% if user.is_superuser %}
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'admin_producto' %}">ADMIN. PRODUCTOS</a>
-                        </li>
-                        {% endif %}
-                        {% if user.is_authenticated %}
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'perfil' %}">PERFIL</a>
-                        </li>
-                        {% else %}
-                        <li>
-                            <span class="tamano"><a class="nav-link" href="{% url 'login' %}"><i class="far fa-user"></i> Iniciar Sesión</a></span>
-                        </li>
-                        {% endif %}
-                        {% if user.is_authenticated %}
-                        <li>
-                            <span class="tamano"><a class="nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></span>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    {% include "include/navbar.html" %}
         <!--@ivbravof Este es el último cambio de prueba-->
         <!--@SpinnyCow27 Este es mi ultimo cambio de prueba-->
         <header class="masthead bg-primary text-white text-center">

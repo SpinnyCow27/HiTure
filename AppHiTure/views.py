@@ -43,7 +43,7 @@ def registro(request):
                 user = form.cleaned_data.get('username')
                 messages.success(request, 'Se registró el usuario ' + user)
                 return redirect('login')
-        return render(request, 'Principal/registro.html', {'form':form})
+        return render(request, 'Perfil/registro.html', {'form':form})
 
 def logoutUser(request):
     logout(request)
@@ -65,7 +65,7 @@ def loginPage(request):
                 return redirect('/index')
             else:
                 messages.info(request,'Usuario o password incorrecto')
-        return render(request,'Principal/loginPage.html')
+        return render(request,'Perfil/loginPage.html')
 
 
 def tienda(request):
@@ -90,7 +90,7 @@ def tienda(request):
 @login_required(login_url='login')
 def perfil(request):
     #user = request.GET['username']
-    return render(request, 'Principal/perfil.html')
+    return render(request, 'Perfil/perfil.html')
     #Este me trae individualmente al usuario que estoy ocupando x ID
     #user = request.GET['username', 'first_name', 'last_name', 'email']
     #Este me trae los datos del usuario
@@ -158,7 +158,7 @@ def modificar(request,id):
 def admin_perfil(request,id):
     user = User.objects.get(id = id)
     form = CreateUserForm
-    return render(request, 'Principal/admin_perfil.html', {'form':form, 'id':user.id})
+    return render(request, 'Perfil/admin_perfil.html', {'form':form, 'id':user.id})
 
 @login_required(login_url='login')
 def modificar_perfil(request,id):

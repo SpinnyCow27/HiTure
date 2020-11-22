@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/Principal/Estilos/estilo_login.css' %}" type="text/css">
+    {% include "include/header.html" %}
+</head>
+<body>
+    {% include "include/navbar.html" %}
+    <br><br><br>
+    <div style="background-image: url('/static/img/Fondo_Registro.png'); " width="1920" height="1080">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-md-9 col-lg-8 mx-auto">
+                        <h3 class="login-heading mb-4" style="color: white"><b>Bienvenido! Aquí podrás Registrarte</b></h3>
+                        
+                        <form role="form" action="#" method="POST" id="frmRegistro">
+                          {% csrf_token %}
+                            <div class="form-label-group" id="fgFirst_name">
+                                <input required type="text" name="first_name" id="first_name" class="form-control" placeholder="Ingrese su Nombre" > 
+                                <label for="first_name">Ingrese su Nombre</label>
+                            </div>
+    
+                            <div class="form-label-group" name id="fgLast_name">
+                                <input required type="text" name="last_name" id="last_name" class="form-control" placeholder="Ingrese su Apellido Paterno" >
+                                <label for="last_name">Ingrese su Apellido Paterno</label>
+                            </div>
+                            
+                            <div class="form-label-group" id="fgUsername">
+                              <input required type="text" name="username" id="username" class="form-control" placeholder="Ingrese su Nombre" > 
+                              <label for="username">Ingrese un Usuario</label>
+                            </div>
+
+                            <div class="form-label-group" id="fgEmail">
+                                <input required type="text" name="email" id="email" class="form-control" placeholder="Ingrese su Correo" >
+                                <label for="email">Ingrese su Correo</label>
+                            </div>
+
+                            <div class="form-label-group" id="fgPassword1">
+                              <input required type="password" name="password1" id="password1" class="form-control" placeholder="Ingrese su Contraseña" >
+                              <label for="password1">Ingrese su Contraseña</label>
+                            </div>
+
+                            <div class="form-label-group" id="fgPassword2">
+                              <input required type="password" name="password2" id="password2" class="form-control" placeholder="Ingrese su Contraseña" >
+                              <label for="password2">Confirme su Contraseña</label>
+                            </div>
+
+                            <!--<div class="form-label-group" id="fgFecNac">
+                                <input type="date" id="inputFecNac" class="form-control" placeholder="FecNac" >
+                                <label for="inputFecNac">Fecha de nacimiento</label>
+                            </div>-->
+
+                            <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Registrar</button>
+                            
+                            <div class="centrar">
+                                <a href="javascript:history.back(1)" style="color:white"><i class="fas fa-arrow-circle-left" style="color: white"></i> Volver</a>
+                            </div>
+                            {% for message in messages %}
+                            <p style="color: white"><b>{{message}}</b></p>
+                            {% endfor %}
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+</body>
+<footer>
+    {% include "include/footer.html" %}
+</footer>
+</html>
