@@ -34,7 +34,7 @@
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'contacto' %}">CONTACTO</a>
                     </li>
                     {% if user.is_superuser %}
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'admin_producto' %">ADMIN. PRODUCTOS</a>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'admin_producto' %}">ADMIN. PRODUCTOS</a>
                     </li>
                     {% endif %}
                     {% if user.is_authenticated %}
@@ -76,9 +76,9 @@
                 <input type="submit" class="btn btn-primary">
             </form>
             {% endif %}
+            </div>
         </div>
     </div>
-</div>
 
 
 </body>

@@ -57,13 +57,13 @@
     <div class="container">
     <center><h1><b>LISTADO DE VIDEOJUEGOS AÑADIDOS</b></h1></center><hr>
     <center><a href="{% url 'crea_producto' %}" class="btn btn-primary"><i class="fas fa-plus"></i> Agregar Producto</a></center><br>
-    <table class="table-bordered">
+    <table class="table-bordered container">
         <thead>
             <tr>
                 <th>NOMBRE</th>
                 <th>PRECIO</th>
                 <th>DESCRIPCIÓN</th>
-                <th>GÉNERO PRODUCTO</th>
+                <th>TIPO MADERA</th>
                 <th>IMAGEN PRODUCTO</th>
                 <th colspan="2">ACCIONES</th>
             </tr>
@@ -83,7 +83,7 @@
             </tr>
             {% endfor %}
         </thead>
-</table>
-</div>
+    </table>
+    </div>
 </body>
 </html>

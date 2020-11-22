@@ -12,7 +12,12 @@
     
     {% include "include/navbar.html" %}<br><br><br><br><br><br>
     <div class="container">
+      {% if user.is_superuser %}
+      <a href="{% url 'admin_producto' %}" class="btn btn-primary" style="float:right;">ADMINISTRAR PRODUCTOS</a>   
       <center><h1><b>Bienvenido a la Tienda!</b></h1></center><hr>
+      {% else %}
+      <center><h1><b>Bienvenido a la Tienda!</b></h1></center><hr>
+      {% endif %}
     </div>
         <div class="catalogue container">
           <div class="row">
@@ -47,15 +52,10 @@
                   
                   <h5 class="card-title text-center">{{pro.nombre_producto}}</h5>
                   <h5 class="card-text text-center">VALOR:</h5><h5 class="text-center"> ${{pro.precio}}</h5>
-                  <div class="card-footer text-center">
-                  {% if user.is_superuser %}
-                  <center><a href="{% url 'admin_producto' %}" class="btn btn-primary">DETALLES</a></center>
-                  {% else %}
                     <!--<center><a href="#" class="btn btn-primary">DETALLES</a></center>-->
+                    <div class="card-footer text-center">
                     <center><a href="/vista_producto/{{pro.id_producto}}" class="btn btn-primary">DETALLES</a></center>
-                  
-                  {% endif %}
-                </div>
+                    </div>
                 </div>
               </div>
       
