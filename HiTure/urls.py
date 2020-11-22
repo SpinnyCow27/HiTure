@@ -15,7 +15,38 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from AppHiTure import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index, name="index"),
+    path('contacto/', views.contacto, name="contacto"),
+    path('registro/', views.registro, name="registro"),
+    path('login/', views.loginPage, name="login"),
+    path('logout/', views.logoutUser, name='logout'),
+    path('perfil/', views.perfil, name="perfil"),
+    path('admin_perfil/<int:id>', views.admin_perfil, name="admin_perfil"),
+    path('modificar_perfil/<int:id>', views.modificar_perfil),
+    path('index/', views.index, name="index"),
+    path('tienda', views.tienda, name='tienda'),
+
+    #Producto
+    path('vista_producto/<int:id>',views.vista_producto, name="vista_producto"),
+    path('admin_producto', views.admin_producto, name="admin_producto"),
+    path('crea_producto/', views.crea_producto, name="crea_producto"),
+    path('edita_producto/<int:id>', views.edita_producto),
+    path('modificar/<int:id>',views.modificar),
+    path('elimina_producto/<int:id>', views.elimina_producto),
+
+    #Password Reset
+    #urls actualizar password
+    path('password_reset/', auth_views.PasswordResetView.as_view(template_name='Reset_password/password_reset.html'), name="password_reset"),
+    path('password_reset_done/', auth_views.PasswordResetDoneView.as_view(template_name='Reset_password/password_reset_done.html'), name="password_reset_done"),
+    path('password_reset_confirm/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(template_name='Reset_password/password_reset_confirm.html'), name="password_reset_confirm"),
+    path('password_reset_complete/', auth_views.PasswordResetCompleteView.as_view(template_name='Reset_password/password_reset_complete.html'), name="password_reset_complete"),
+
+
 ]

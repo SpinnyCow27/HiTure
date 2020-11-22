@@ -58,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         #'DIRS': [],
-        'DIRS': [C:/proyectos_django/HiTure/AppHiTure/templates],
+        'DIRS': ['C:/Users/nicol/OneDrive/Documentos/Proyectos Django/HiTure/HiTure/AppHiTure/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
