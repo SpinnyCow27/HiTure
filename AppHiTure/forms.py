@@ -81,7 +81,7 @@ class ProductoForm(forms.ModelForm):
                     'placeholder': 'Ingrese el Precio del Producto'
                 }
             ),
-            'descripcion': forms.TextInput(
+            'descripcion': forms.Textarea(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Ingrese una Descripción'
