@@ -4702,12 +4702,12 @@ a.close.disabled {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #19d233 !important; }
+  background-color: #ce640d !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #14a428 !important; }
+  background-color: #9c4b09 !important; }
 
 .bg-secondary {
   background-color: #1e2429 !important; }
@@ -4718,12 +4718,12 @@ button.bg-secondary:focus {
   background-color: #080a0c !important; }
 
 .bg-success {
-  background-color: #28a745 !important; }
+  background-color: #9c4b09 !important; }
 
 a.bg-success:hover, a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
-  background-color: #1e7e34 !important; }
+  background-color: #9c4b09 !important; }
 
 .bg-info {
   background-color: #17a2b8 !important; }
