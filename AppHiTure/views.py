@@ -13,6 +13,9 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required, user_passes_test
 
+
+#conexion de oracle
+from django.db import connection
 #from .filters import ProductoFilter
 
 
@@ -100,7 +103,7 @@ def perfil(request):
 @user_passes_test((lambda u: u.is_superuser),login_url='login')
 def admin_producto(request):
     form = ProductoForm()
-    productos = Producto.objects.all()
+    productos = listado_productos()
     if request.method == 'POST':
         print(request.POST)
         form = ProductoForm(request.POST, request.FILES)
@@ -189,6 +192,17 @@ def vista_producto(request, id):
     form = ProductoForm(instance=pro)
     return render(request,'Producto/vista_producto.html', {'form':form, 'pro':pro})
 
+def vista_producto2(request, id):
+    if request.method == 'POST':
+        producto = Producto.objects.get(id_producto=id)
+        producto.stock -= 1 #producto.stock = producto.stock - 1
+        producto.save()
+        return redirect('vista_producto2', id = id)
+    pro = Producto.objects.get(id_producto=id)
+    #print(pro)
+    form = ProductoForm(instance=pro)
+    return render(request,'Producto/vista_producto2.html', {'form':form, 'pro':pro})
+
 
 @login_required(login_url='login')
 @user_passes_test((lambda u: u.is_superuser),login_url='login')
@@ -210,7 +224,18 @@ def productos(request):
     context = {'form':form, 'producto': producto}
     return render(request, 'productos.html',context)
 
+def listado_productos():
+    django_cursor = connection.cursor()
+    cursor = django_cursor.connection.cursor()
+    out_cur = django_cursor.connection.cursor()
 
+    cursor.callproc("SP_LISTAR_PRODUCTOS", [out_cur])
+
+    lista = []
+
+    for fila in out_cur:
+        lista.append(fila)
+    return lista
     
 
 
