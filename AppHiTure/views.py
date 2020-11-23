@@ -13,6 +13,9 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required, user_passes_test
 
+
+#conexion de oracle
+from django.db import connection
 #from .filters import ProductoFilter
 
 
@@ -99,8 +102,9 @@ def perfil(request):
 @login_required(login_url='login')
 @user_passes_test((lambda u: u.is_superuser),login_url='login')
 def admin_producto(request):
+    print(listado_productos())
     form = ProductoForm()
-    productos = Producto.objects.all()
+    productos = listado_productos()
     if request.method == 'POST':
         print(request.POST)
         form = ProductoForm(request.POST, request.FILES)
@@ -221,7 +225,18 @@ def productos(request):
     context = {'form':form, 'producto': producto}
     return render(request, 'productos.html',context)
 
+def listado_productos():
+    django_cursor = connection.cursor()
+    cursor = django_cursor.connection.cursor()
+    out_cur = django_cursor.connection.cursor()
 
+    cursor.callproc("SP_LISTAR_PRODUCTOS", [out_cur])
+
+    lista = []
+
+    for fila in out_cur:
+        lista.append(fila)
+    return lista
     
 
 
