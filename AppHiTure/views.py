@@ -189,6 +189,17 @@ def vista_producto(request, id):
     form = ProductoForm(instance=pro)
     return render(request,'Producto/vista_producto.html', {'form':form, 'pro':pro})
 
+def vista_producto2(request, id):
+    if request.method == 'POST':
+        producto = Producto.objects.get(id_producto=id)
+        producto.stock -= 1 #producto.stock = producto.stock - 1
+        producto.save()
+        return redirect('vista_producto2', id = id)
+    pro = Producto.objects.get(id_producto=id)
+    #print(pro)
+    form = ProductoForm(instance=pro)
+    return render(request,'Producto/vista_producto2.html', {'form':form, 'pro':pro})
+
 
 @login_required(login_url='login')
 @user_passes_test((lambda u: u.is_superuser),login_url='login')
