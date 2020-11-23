@@ -131,7 +131,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    'C:/proyectos_django/HiTure/AppHiTure/static',
+    #'C:/proyectos_django/HiTure/AppHiTure/static',
+    'C:/Users/nicol/OneDrive/Documentos/Proyectos Django/HiTure/HiTure/AppHiTure/static',
 ]
 
 MEDIA_URL =  '/media/'
