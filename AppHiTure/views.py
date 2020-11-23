@@ -102,7 +102,6 @@ def perfil(request):
 @login_required(login_url='login')
 @user_passes_test((lambda u: u.is_superuser),login_url='login')
 def admin_producto(request):
-    print(listado_productos())
     form = ProductoForm()
     productos = listado_productos()
     if request.method == 'POST':
