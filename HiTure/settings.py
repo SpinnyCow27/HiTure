@@ -84,7 +84,7 @@ DATABASES = {
         'USER': 'mlp',
         'PASSWORD': 'mlp',
         'TEST': {
-            'USER': 'default_test',
+            'USER': 'mlp',
             'TBLSPACE': 'default_test_tbls',
             'TBLSPACE_TMP': 'default_test_tbls_tmp',
         },
