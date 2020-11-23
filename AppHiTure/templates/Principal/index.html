@@ -17,7 +17,7 @@
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <a href="https://www.xbox.com/es-CL">
-                <img class="masthead-avatar mb-5" src="{% static 'img/1200px-Xbox_logo_(2019).svg.png' %}" alt="">
+                <img class="masthead-avatar mb-5" src="{% static 'img/pino_negro.png' %}" alt="">
                 </a>
                 <!-- Masthead Heading-->
                 {% if user.is_authenticated %}
@@ -69,63 +69,63 @@
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Muebles más cotizados!</h2>
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Artículos más cotizados!</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="divider-custom-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-basket2-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1z"/></svg></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
                     <!-- Portfolio Items-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
+                        <div class="portfolio-item mx-auto border" data-toggle="modal" data-target="#portfolioModal0" style="border-radius:25px;">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-xbox fa-3x"></i><p>$45.990</p></div>
-                            </div><img class="img-fluid" src="https://dprimero.com/wp-content/uploads/2020/05/ACK_UCS16407_XOne_BXSHT2D_US.jpg" alt="Log Cabin"/>
+                                <div class="portfolio-item-caption-content text-center text-white"><img src="{% static 'img/pino_blanco.png' %}" height="128" width="128"><p>$79.990</p></div>
+                            </div><img class="img-fluid" src="{% static 'img/media/MuebleMadera12Casillas.png.png' %}" alt="Mueble12Casillas"/>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                        <div class="portfolio-item mx-auto border" data-toggle="modal" data-target="#portfolioModal1" style="border-radius:25px;">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-xbox fa-3x"></i><p>$50.990</p></div>
-                            </div><img class="img-fluid" src="https://images-na.ssl-images-amazon.com/images/I/81KJ8RgF3GL._AC_SX342_.jpg" alt="Tasty Cake"/>
+                                <div class="portfolio-item-caption-content text-center text-white"><img src="{% static 'img/pino_blanco.png' %}" height="128" width="128"><p>$34.990</p></div>
+                            </div><img src="{% static 'img/media/mueble-lateral-nordico-iowa.jpg' %}" alt="MuebleLateralNordico"/>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                        <div class="portfolio-item mx-auto border" data-toggle="modal" data-target="#portfolioModal2" style="border-radius:25px;">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-xbox fa-3x"></i><p>$45.990</p></div>
-                            </div><img class="img-fluid" src="https://generacionxbox.com/wp-content/uploads/2020/07/far-cry-xbox-series-x-portada-2.jpg" alt="Circus Tent"/>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-xbox fa-3x"></i><p>$25.990</p></div>
-                            </div><img class="img-fluid" src="https://media.vandal.net/m/24726/halo-the-master-chief-collection-2014111011594_1.jpg" alt="Controller"/>
+                                <div class="portfolio-item-caption-content text-center text-white"><img src="{% static 'img/pino_blanco.png' %}" height="128" width="128"><p>$24.990</p></div>
+                            </div><img class="img-fluid" src="{% static 'img/media/velador-rustico.jpg' %}" alt="VeladorRustico"/>
                         </div>
                     </div>
 
 
 
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                        <div class="portfolio-item mx-auto border" data-toggle="modal" data-target="#portfolioModal3" style="border-radius:25px;">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-xbox fa-3x"></i><p>$40.990</p></div>
-                            </div><img class="img-fluid" src="https://images-na.ssl-images-amazon.com/images/I/81WVSzaRiML.SX342.jpg" alt="Locked Safe"/>
+                                <div class="portfolio-item-caption-content text-center text-white"><img src="{% static 'img/pino_blanco.png' %}" height="128" width="128"><p>$79.990</p></div>
+                            </div><img class="img-fluid" src="{% static 'img/media/EstanteBonito.jpg' %}" alt="EstanteBonito"/>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto border" data-toggle="modal" data-target="#portfolioModal4" style="border-radius:25px;">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><img src="{% static 'img/pino_blanco.png' %}" height="128" width="128"><p>$239.990</p></div>
+                            </div><img class="img-fluid" src="{% static 'img/media/mueble-tv.jpg' %}" alt="MuebleTV"/>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                        <div class="portfolio-item mx-auto border" data-toggle="modal" data-target="#portfolioModal5" style="border-radius:25px;">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-xbox fa-3x"></i><p>$35.990</p></div>
-                            </div><img class="img-fluid" src="https://uvejuegos.com/img/caratulas/61232/DOOME_ONE_2Dpack_es_pegi_1559730286.jpg" alt="Submarine"/>
+                                <div class="portfolio-item-caption-content text-center text-white"><img src="{% static 'img/pino_blanco.png' %}" height="128" width="128"><p>$109.990</p></div>
+                            </div><img class="img-fluid" src="{% static 'img/media/estante-5-repisas.jpg' %}" alt="Estante5pisos"/>
                         </div>
                     </div>
                 </div>
@@ -141,18 +141,17 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Assasins Creed: Valhalla</h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Mueble con 12 casillas</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-shopping-basket"></i> </div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="https://dprimero.com/wp-content/uploads/2020/05/ACK_UCS16407_XOne_BXSHT2D_US.jpg" alt="Log Cabin"/>
-                                    <h1 class="portfolio-modal-title">$45.990</h1><br/>
+                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{% static 'img/media/MuebleMadera12Casillas-c.png' %}" alt="Mueble12Casillas"/>
+                                    <h1 class="portfolio-modal-title">$79.990</h1><br/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Valhalla cuenta la historia de Eivor, un vikingo o vikinga, según lo elijamos tal y como ocurría en la entrega anterior
-                                        que debe liderar a su clan para escapar del frío noruego para colonizar los campos ingleses del siglo IX.</p>
+                                    <p class="mb-5">Mueble de roble con 12 casillas que soporta un peso máximo de 115kg</p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar Ventana</button>
                                 </div>
                             </div>
@@ -172,18 +171,17 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">CyberPunk 2077</h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Mueble lateral nordico</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-shopping-basket"></i> </div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="https://resources.claroshop.com/medios-plazavip/fotos/productos_sears1/original/2948980.jpg" alt="Tasty Cake"/>
-                                    <h1 class="portfolio-modal-title">$50.990</h1><br/>
+                                    <!-- Portfolio Modal - Image--><img class="rounded mb-5" src="{% static 'img/media/mueble-lateral-nordico-iowa-c.jpg' %}" alt="MuebleLateralNordico"/>
+                                    <h1 class="portfolio-modal-title">$34.990</h1><br/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Los padres de The Witcher nos presentan para Xbox One una aventura de corte futurista y cyberpunk en la que encarnaremos a un personaje diseñado a nuestra medida 
-                                        y en la que tendremos que sobrevivir en una peligrosa urbe plagada de corporaciones, cyborgs, bandas y las más variadas amenazas tecnológicas.</p>
+                                    <p class="mb-5"> Mueble lateral nordico iowa de roble con carga máxima de 70kg</p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar Ventana</button>
                                 </div>
                             </div>
@@ -203,20 +201,17 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Far Cry 6</h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Pequeño velador rustico</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-shopping-basket"></i> </div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="https://generacionxbox.com/wp-content/uploads/2020/07/far-cry-xbox-series-x-portada-2.jpg" alt="Circus Tent"/>
-                                    <h1 class="portfolio-modal-title">$45.990</h1><br/>
+                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{% static 'img/media/velador-rustico-c.jpg' %}" alt="VeladorRustico"/>
+                                    <h1 class="portfolio-modal-title">$24.990</h1><br/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Te damos la bienvenida a Yara, un paraíso tropical que se ha detenido en el tiempo. 
-                                        FAR CRY®6 lanza a los jugadores al mundo cargado de adrenalina de una revolución guerrillera actual. 
-                                        Como dictador de Yara, Anton Castillo está decidido a devolver a su nación la antigua gloria perdida por todos los medios, 
-                                        y su hijo Diego sigue sus sangrientos pasos. Conviértete en un guerrillero y reduce su régimen a cenizas.</p>
+                                    <p class="mb-5">Pequeño velador rustico que soporta un peso de máximo 40kg</p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar Ventana</button>
                                 </div>
                             </div>
@@ -236,18 +231,17 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Halo the Master Chief Collection</h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Mueble de 5 pisos</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-shopping-basket"></i> </div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="https://media.vandal.net/m/24726/halo-the-master-chief-collection-2014111011594_1.jpg" alt="Controller"/>
-                                    <h1 class="portfolio-modal-title">$25.990</h1><br/>
+                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{% static 'img/media/EstanteBonito-c.jpg' %}" alt="Estante5pisos"/>
+                                    <h1 class="portfolio-modal-title">$79.990</h1><br/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Por primera vez, se reúne toda la historia del Jefe Maestro en una única consola. Esta colección incluye una versión remasterizada de 
-                                        Halo 2: Anniversary, junto con Halo: Combat Evolved Anniversary, Halo 3, Halo 4, la nueva serie digital, Halo: Nightfall y acceso a Halo 5: Guardians Beta.</p>
+                                    <p class="mb-5">Mueble de roble de 5 pisos que soporta un peso máximo de 140kg</p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar Ventana</button>
                                 </div>
                             </div>
@@ -267,20 +261,17 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Red Dead Redemption 2</h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Mueble TV XL</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-shopping-basket"></i> </div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="https://images-na.ssl-images-amazon.com/images/I/81WVSzaRiML.SX342.jpg" alt="Locked Safe"/>
-                                    <h1 class="portfolio-modal-title">$40.990</h1><br/>
+                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{% static 'img/media/mueble-tv-c.jpg' %}" alt="MuebleTV"/>
+                                    <h1 class="portfolio-modal-title">$239.990</h1><br/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Luego de un asalto fallido en el pueblo de Blackwater, Arthur Morgan y la banda de Van der Linde se ven obligados a huir. 
-                                        Con agentes federales y los mejores cazarrecompensas pisándoles los talones, la banda deberá abrirse camino por el salvaje territorio del corazón de 
-                                        Estados Unidos a base de robos y peleas para sobrevivir. Mientras las divisiones internas aumentan y amenazan con desmantelar el grupo, 
-                                        Arthur debe elegir entre sus propios ideales y la lealtad a la banda que lo vio crecer. </p>
+                                    <p class="mb-5">Amplio mueble de roble capaz de soportar hasta 700kg, ideal para la sala de estar.</p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar Ventana</button>
                                 </div>
                             </div>
@@ -300,19 +291,17 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Doom Eternal</h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Mueble de 10 compartimientos</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-shopping-basket"></i> </div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="https://uvejuegos.com/img/caratulas/61232/DOOME_ONE_2Dpack_es_pegi_1559730286.jpg" alt="Submarine"/>
-                                    <h1 class="portfolio-modal-title">$45.990</h1><br/>
+                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{% static 'img/media/estante-5-repisas-c.jpg' %}" alt="Mueble10Casillas"/>
+                                    <h1 class="portfolio-modal-title">$109.000</h1><br/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Es la secuela directa del celebrado título de acción tipo shooter de 2016, el reboot de tan mítica franquicia. 
-                                        Un personaje mucho más poderoso deberá enfrentarse al doble de demonios de la primera entrega. En el papel del DOOM Slayer, descubrirás a tu regreso
-                                        que los demonios han invadido la Tierra. Mándalos al infierno y descubre los orígenes del Slayer y su perpetua misión de matanza y destrucción... hasta el final.</p>
+                                    <p class="mb-5">Mueble de 10 compartimientos capaz de almacenar hasta 140kg</p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar Ventana</button>
                                 </div>
                             </div>
@@ -338,7 +327,7 @@
                                         <!-- Icon Divider-->
                                         <div class="divider-custom">
                                             <div class="divider-custom-line"></div>
-                                            <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                            <div class="divider-custom-icon"><i class="fas fa-shopping-basket"></i> </div>
                                             <div class="divider-custom-line"></div>
                                         </div>
                                         <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="https://media.vandal.net/m/24726/halo-the-master-chief-collection-2014111011594_1.jpg" alt="Tasty Cake"/>
@@ -369,7 +358,7 @@
                                         <!-- Icon Divider-->
                                         <div class="divider-custom">
                                             <div class="divider-custom-line"></div>
-                                            <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                            <div class="divider-custom-icon"><i class="fas fa-shopping-basket"></i> </div>
                                             <div class="divider-custom-line"></div>
                                         </div>
                                         <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="https://images-na.ssl-images-amazon.com/images/I/710du8%2BREiL._SL1108_.jpg" alt="Tasty Cake"/>
@@ -401,7 +390,7 @@
                                         <!-- Icon Divider-->
                                         <div class="divider-custom">
                                             <div class="divider-custom-line"></div>
-                                            <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                            <div class="divider-custom-icon"><i class="fas fa-shopping-basket"></i> </div>
                                             <div class="divider-custom-line"></div>
                                         </div>
                                         <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="https://dprimero.com/wp-content/uploads/2020/05/ACK_UCS16407_XOne_BXSHT2D_US.jpg" alt="Tasty Cake"/>
@@ -438,10 +427,10 @@
                 <!-- About Section Content-->
                 <div class="row">
                     <div class="col-lg-4 ml-auto">
-                        <p class="pre-wrap lead">Somos una empresa Emergente, la cual ha traído un catálogo de juegos de Xbox</p>
+                        <p class="pre-wrap lead">Somos una empresa emergente, la cual ha traído un catálogo de juegos de Xbox</p>
                     </div>
                     <div class="col-lg-4 mr-auto">
-                        <p class="pre-wrap lead"><strong>Dato Freak:</strong> Tenemos distintas divisiones alrededor, y somos Hitachi Corp S.A</p>
+                        <p class="pre-wrap lead"><strong>Información relevante:</strong> Tenemos distintas divisiones alrededor del país, todas bajo el nombre de la empresa Hitachi Corp S.A.</p>
                     </div>
                 </div>
             </div>
