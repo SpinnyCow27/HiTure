@@ -80,8 +80,15 @@
 		<!--<div class="row mb-4 mt-4">
 			<button class="btn btn-lg color-box-waanbii" type="button"> <i class="fa fa-credit-card"></i> Passer la commande </button>
 		</div>-->
+		{% if pro.stock > 0 %}
 		<div class="row mb-4 mt-4">
-			<button class="btn btn-lg btn-success" type="button"> <i class="fa fa-shopping-cart"></i> Comprar </button>
+			<form method="POST">
+				{% csrf_token %}
+				<input type="submit" value="COMPRAR" class="btn btn-primary">
+			</form>
+		{% endif %}
+			<!--<a href="/vista_producto/{{pro.id_producto}}"><button class="btn btn-lg btn-success" type="button"> <i class="fa fa-shopping-cart"></i> Comprar </button></a>-->
+
 		</div>
 		<hr class="m-0 p-0">
 		<div class="row mb-4 mt-4">
